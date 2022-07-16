@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-public class Aufgabe5StepDefs {
+public class Task5StepsDefs {
     @Given("User clicks DayNight mode")
     public void user_clicks_DayNight_mode() throws MalformedURLException, InterruptedException {
         MobileElement sonneIcon = Driver.getDriver().findElement(By.id("com.example.yeshasprabhakar.todo:id/themeActionButton"));

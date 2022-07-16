@@ -5,18 +5,18 @@
 #2         "Test" in Textfeld schreiben
 #3         done klicken                    Neuer Task "Test" wurde erstellt und ist in der Liste sichtbar
 #4         Mülltonnen Icon klicken         "Deleted successfully" erscheint Aufgabe wurde aus der Liste entfernt
-@wip
-Feature: Aufgabe 4 Features
+
+Feature: Task 4 Features
 
   Scenario Outline:delete an added task
-    Given As a user I click plus button
-    Then The Dialog have to be oppened
-    And user writes "<Text>" in Text field
+    Given User clicks plus button
+    Then The Dialog window must be oppened
+    And User writes "<Text>" in to the Text field
     Then user clicks done button
-    Then new Task have to be created and "<Text>" task can be seen on the list
+    Then new Task must be created and "<Text>" task must be seen on the task list
     And user clicks trash icon
-    Then DELETED SUCCESFULLY text should be seen on the screen
-    Then new Task have to be deleted and "<Text>" task can not be seen on the list
+    Then "Deleted Successfully!" text should be seen on the screen
+    Then new Task must be deleted and "<Text>" task must not be able to seen on the list
 
     Examples:
       | Text |

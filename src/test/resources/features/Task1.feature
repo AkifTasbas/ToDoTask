@@ -1,6 +1,4 @@
 
-Feature: Aufgabe 1 Features
-
 #  ---------------------------------------TEST1 Hinzufügen einer Aufgabe ------------------------------------------------
 #  Plus Button klicken      Add here control of "Lets add mew Task!" Dialog is oppened or not!!!!!!!!
 #
@@ -10,12 +8,13 @@ Feature: Aufgabe 1 Features
 #  2         "Test" in Textfeld schreiben
 #  3         done klicken                    Neuer Task "Test" wurde erstellt und ist in der Liste sichtbar
 
-  Scenario Outline:Adding new Task
-    Given As a user I click plus button
-    Then The Dialog have to be oppened
-    And user writes "<Text>" in Text field
+Feature: Task 1 Features
+  Scenario Outline:Create a new Task
+    Given User clicks plus button
+    Then The Dialog window must be oppened
+    And User writes "<Text>" in to the Text field
     Then user clicks done button
-    Then new Task have to be created and "<Text>" task can be seen on the list
+    Then new Task must be created and "<Text>" task must be seen on the task list
 
     Examples:
       | Text |

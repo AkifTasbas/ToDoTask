@@ -3,7 +3,7 @@
 #Schritt   Aktion                          Erwartetes Ergebnis
 #1         Sonne/Mond Icon klicken         Hintergrund ist dunken
 #2         Sonne/Mond Icon klicken         Hintergrund ist hell
-@wip
+
 Feature: Task 5 Features
   Scenario: Change Day and Night mode
     Given User clicks DayNight mode

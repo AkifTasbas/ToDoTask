@@ -31,6 +31,8 @@ public class BrowserUtilities {
     public static MobileElement waitForVisibility(MobileElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
         return (MobileElement) wait.until(ExpectedConditions.visibilityOf(element));
+
+
     }
     public static void waitForPresence(By by, int timeToWaitInSec) {
 

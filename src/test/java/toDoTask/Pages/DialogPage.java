@@ -16,19 +16,25 @@ public class DialogPage {
 
     public MobileElement getCancelButton() {
         cancelButton = Driver.getDriver().findElement(By.id("android:id/button2"));
-        return BrowserUtilities.waitForVisibility(cancelButton,3);
+        BrowserUtilities.waitForVisibility(cancelButton,3);
+        return cancelButton;
     }
     public MobileElement getTextfeld() {
         textfeld = Driver.getDriver().findElement(By.xpath("//*[@text='My Task']"));
-        return BrowserUtilities.waitForVisibility(textfeld, 3);
+        BrowserUtilities.waitForVisibility(textfeld, 3);
+        return textfeld;
     }
     public MobileElement getDoneButton() {
         doneButton = Driver.getDriver().findElement(By.id("android:id/button1"));
-        return BrowserUtilities.waitForVisibility(doneButton, 3);
+        BrowserUtilities.waitForVisibility(doneButton, 6);
+        return doneButton;
     }
     public MobileElement getDialogWindow() {
         dialogWindow = Driver.getDriver().findElement(By.xpath("/hierarchy/android.widget.FrameLayout"));
-        return BrowserUtilities.waitForVisibility(dialogWindow, 3);
+        BrowserUtilities.waitForVisibility(dialogWindow, 3);
+        BrowserUtilities.waitFor(2);
+        return dialogWindow;
+
     }
 
 

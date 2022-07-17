@@ -1,6 +1,7 @@
 package toDoTask.step_definitions;
 
 
+import io.appium.java_client.MobileElement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -18,18 +19,21 @@ public class Task1StepsDefs {
 
     @Given("User clicks plus button")
     public void user_clicks_plus_button() {
-        BrowserUtilities.waitFor(3);
+        BrowserUtilities.waitFor(1);
         startPage.getPlusButton().click();
     }
 
     @Then("The Dialog window must be oppened")
     public void the_Dialog_window_must_be_oppened() {
-
-        Assert.assertTrue(dialogPage.getDialogWindow().isDisplayed());
+        BrowserUtilities.waitFor(2);
+       MobileElement dp=dialogPage.getDialogWindow();
+       BrowserUtilities.waitFor(2);
+      Assert.assertTrue(dp.isDisplayed());
     }
 
     @Then("User writes {string} in to the Text field")
     public void user_writes_in_to_the_Text_field(String text) {
+
         dialogPage.getTextfeld().sendKeys(text);
     }
 

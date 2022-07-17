@@ -7,6 +7,7 @@
 #  1         Plus Button klicken            "Lets add mew Task!" Dialog öffnet sich
 #  2         "Test" in Textfeld schreiben
 #  3         done klicken                    Neuer Task "Test" wurde erstellt und ist in der Liste sichtbar
+
 Feature: Task 1 Features
   Scenario Outline:Create a new Task
     Given User clicks plus button

@@ -1,5 +1,7 @@
 package toDoTask.step_definitions;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import toDoTask.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -19,7 +21,12 @@ public class BeforeAfterClass {
     }
 
     @After
-    public void tearDown(Scenario scenario){
+    public void tearDown(Scenario scenario) throws MalformedURLException, InterruptedException {
+
+        if(scenario.isFailed()){
+            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot,"image/png","ScreenShot");
+        }
 
         Driver.closeDriver();
         System.out.println("\tThe App closed succesfully ");

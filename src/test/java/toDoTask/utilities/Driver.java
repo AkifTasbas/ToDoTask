@@ -17,7 +17,7 @@ public class Driver {
     public Driver() throws MalformedURLException, InterruptedException {
     }
 
-    public static AppiumDriver<MobileElement> getDriver() throws InterruptedException, MalformedURLException {
+    public static AppiumDriver<MobileElement> getDriver() {
         if (driver == null) {
 
             DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -45,9 +45,17 @@ public class Driver {
         we need to provide 2 parameters: URL of appium servers and desired capabilities
 
         */
-            driver = new AppiumDriver<>(new URL(ConfigurationReader.get("AppiumUrl")), desiredCapabilities);
+            try {
+                driver = new AppiumDriver<>(new URL(ConfigurationReader.get("AppiumUrl")), desiredCapabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
 
-            Thread.sleep(3000);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         return driver;

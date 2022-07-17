@@ -5,6 +5,7 @@
 #2         "Test" in Textfeld schreiben
 #3         cancel klicken                 Es wurde kein neuer Task hinzugefügt, oben steht noch immer "What do you want to do today?"
 
+
 Feature: Task 2 Features
 
   Scenario Outline:Adding new Task and cancel

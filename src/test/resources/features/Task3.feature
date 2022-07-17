@@ -2,7 +2,8 @@
 #3. Hinzufügen einer Aufgabe ohne Titel
 #Schritt   Aktion                          Erwartetes Ergebnis
 #1         Plus Button klicken            "Lets add mew Task!" Dialog öffnet sich
-#2         done klicken                   Fehlermeldung "Oops, Cannot set an empty text" erscheint
+#2         done klicken                   Fehlermeldung "Oops, Cannot set an empty ToDo!!!" erscheint
+  #Test Case was wrong writed
 
 Feature: Task 3 Features
 
@@ -10,4 +11,4 @@ Feature: Task 3 Features
     Given User clicks plus button
     Then The Dialog window must be oppened
     Then user clicks done button
-    Then "Oops, Cannot set an empty text" message must be seen on the screen
+    Then "Oops, Cannot set an empty ToDo!!!" message must be seen on the screen
